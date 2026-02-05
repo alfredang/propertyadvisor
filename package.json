@@ -1,0 +1,17 @@
+{
+  "name": "propertyadvisor",
+  "version": "1.0.0",
+  "description": "PropertyAdvisor Monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
