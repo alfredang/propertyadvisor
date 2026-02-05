@@ -15,18 +15,22 @@ const regions = [
 async function main() {
     console.log('Seeding database...');
 
-    // Create Agents
+    // Create or get Agents
     const agents = await Promise.all([
-        prisma.agent.create({
-            data: {
+        prisma.agent.upsert({
+            where: { email: 'john.tan@propertyguru.clone' },
+            update: {},
+            create: {
                 name: 'John Tan',
                 email: 'john.tan@propertyguru.clone',
                 phone: '+65 9123 4567',
                 photoUrl: 'https://i.pravatar.cc/150?u=johntan',
             }
         }),
-        prisma.agent.create({
-            data: {
+        prisma.agent.upsert({
+            where: { email: 'sarah.lim@propertyguru.clone' },
+            update: {},
+            create: {
                 name: 'Sarah Lim',
                 email: 'sarah.lim@propertyguru.clone',
                 phone: '+65 8234 5678',
