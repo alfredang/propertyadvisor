@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import PropertyCard from '@/components/PropertyCard';
+import Link from 'next/link';
 import { API_BASE_URL } from '@/config';
 
 export default function Home() {
